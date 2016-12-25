@@ -1,0 +1,25 @@
+{
+  "name": "Order",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "mixins": {
+    "TimeStamp": true,
+    "Stats": {
+      "method": "stats",
+      "endpoint": "/stats",
+      "type": "model",
+      "count": {
+        "on": "createdAt",
+        "by": "index"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
